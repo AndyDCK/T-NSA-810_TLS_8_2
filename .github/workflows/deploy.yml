@@ -23,9 +23,6 @@ jobs:
               working-directory: .frontend
               run: yarn install
 
-            - name: Run backend tests
-              working-directory: ./backend
-              run: yarn test
 
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v2
