@@ -51,7 +51,7 @@ jobs:
                 tags: ${{ secrets.DOCKER_USERNAME }}/t-nsa-backend:latest
 
             - name: Upload built docker-compose as artifact
-              uses: actions/upload-artifacts@v4
+              uses: actions/upload-artifact@v3
               with:
                 name: docker-compose-bundle
                 path: ./docker-compose.yml
