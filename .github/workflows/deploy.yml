@@ -9,6 +9,7 @@ on:
 jobs:
     build_and_push:
         runs-on: ubuntu-latest
+        environment: T-NSA-810
 
         steps:
             - name: Checkout code
