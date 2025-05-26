@@ -6,19 +6,7 @@ Steps to run this project:
 1. Run `yarn`
 2. Run `yarn run typeorm migration:create -n CreateAdminUser `
 3. File inside `src/migration` was created 
-4. Replace `up` function by 
-```
-  public async up(queryRunner: QueryRunner): Promise<any> {
-    const user = new User();
-    user.username = 'admin';
-    user.password = 'admin';
-    user.hashPassword();
-    user.role = 'ADMIN';
-    const userRepository = getRepository(User);
-    await userRepository.save(user);
-  }
-```
-5. Add inside the same file 
+4. Add inside the same file 
 ```
 import {getRepository, MigrationInterface, QueryRunner} from "typeorm";
 import {User} from "../entity/User";
