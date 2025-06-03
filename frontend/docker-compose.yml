@@ -1,8 +1,7 @@
-version: "3"
-
 services:
   front:
-    build: .
+    # build: .
+    image: http://10.134.200.50:5000/t-nsa-frontend:latest
     ports:
       - 8080:80
     environment:
